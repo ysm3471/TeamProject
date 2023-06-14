@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "country":"Swiss",
+      "distance":11449
+    },
+    {
+      "country":"Okinawa",
+      "distance":1267
+    },
+    {
+      "country":"Tokyo",
+      "distance":1194
+    },
+    {
+      "country":"France",
+      "distance":9491
+    },
+    {
+      "country":"Hawaii",
+      "distance":7655
+    }
+  ]
+}

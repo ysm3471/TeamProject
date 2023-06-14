@@ -1,0 +1,178 @@
+@charset "UTF-8"; 
+
+@media (max-width:1200px) {
+
+  /* contents */
+  .contents {
+    grid-gap:40px 25px;
+    grid-template-columns:repeat(2,1fr) ;
+  }
+
+  /* container */
+  #container {
+    padding:70px 30px;
+  }
+
+  /* title */
+  .title h1 {
+    margin-bottom:150px;
+  }
+
+  .categorys li {
+    margin-right:0;
+  }
+  .categorys li:not(:last-child) {
+    margin-right:23px;
+  }
+
+  /* sort_category */
+  .sort_wrap {
+    right:30px;
+  }
+}
+
+@media (max-width:991px) {
+
+    /* category */
+  .category_wrap {
+    height:80px;
+    padding:25px 20px;
+    border-bottom:1px solid #d9d9d9;
+    border-top:1px solid #d9d9d9;
+    position:relative;
+    cursor: pointer;
+  }
+    /* slide_btn */
+    .categorys .slide_btn {
+      position:absolute;
+      top:25px;
+      right:25px;
+      height:30px;
+      width:30px;
+    }
+    .categorys .slide_btn::after, .categorys .slide_btn::before {
+      display:block;
+      content:"";
+      position:absolute;
+      top:13px;
+      width:18px;
+      height:2px;
+      background:#111;
+      transform:rotate(45deg);
+    }
+    .categorys .slide_btn::after {
+      left:0px;
+    }
+    .categorys .slide_btn::before {
+      transform:rotate(135deg);
+      right:0px;
+    }
+
+    /* 버튼을 누르면 내려옴 */
+    .categorys .mb_slide {
+      position:absolute;
+      top:79px;
+      left:0;
+      z-index:200;
+      max-height:0;
+      overflow:hidden;
+      background:rgba(255,255,255,.8);
+      transition:.3s;
+    }
+    .categorys ul {
+      display:block;
+      width:100%;
+      padding:40px 80px;
+      line-height:2.5;
+      opacity:0;
+      transition:0.3s;
+    }
+    .categorys li:not(.third) {
+      margin-right:30px;
+    }
+  
+  /* sort_category */
+  .sort_wrap {
+    top:110px;
+    right:30px;
+  }
+
+  /* contents */
+  .contents {
+    grid-gap:40px 25px;
+    grid-template-columns:1fr;
+  }
+  .swiper {
+    padding-bottom:45px;
+  }
+  /* title */
+  .title h1 {
+    margin-bottom:70px;
+  }
+
+  /* content */
+  .content_img_wrap {
+    margin-bottom:30px;
+  }
+  .content {
+    padding-bottom:35px;
+    margin-bottom:0px;
+  }
+  .content_text .booking_btn {
+    display:block;
+    position:absolute;
+    right:7px;
+    top:84px;
+    color:#333;
+    font-weight:400;
+  }
+}
+
+@media (max-width:480px) {
+
+  /* category */
+  .category_wrap {
+    height:70px;
+  }
+  .categorys h3 {
+    line-height:20px;
+    font-size:15px;
+  }
+    /* slide_btn */
+    .categorys .slide_btn {
+      top:21px;
+      right:20px;
+    }
+    .categorys .slide_btn::after, .categorys .slide_btn::before {
+      width:15px;
+    }
+    .categorys .slide_btn::after {
+      left:2px;
+    }
+    .categorys .slide_btn::before {
+      right:3px;
+    }
+  /* content */
+  .contents {
+    grid-gap:25px 25px;
+  }
+  .content {
+    padding-bottom:20px;
+  }
+  .content_img_wrap {
+    height:209px;
+    margin-bottom:20px;
+  }
+  .content_text .country, .content_text .hash_tag {
+    font-size:14px;
+  }
+  .content_text .distance {
+    font-size:12px;
+    color:#999292;
+  }
+  .content_text .booking_btn {
+    right:7px;
+    top:73px;
+    font-size:12px;
+  }
+}

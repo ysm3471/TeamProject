@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FST : Free Spirit Tour || Domestic Travel </title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/basic.css">
+  <link rel="stylesheet" href="css/sub1.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/prefixfree.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script defer src="js/basic.js"></script>
+  <script defer src="js/sub1.js"></script>
+  <script defer type="module" src="js/sub1-2.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header_wrap">
+      <div class="header_top">
+        <h1><a href="../index.html">LOGO</a></h1>
+        <ul>
+          <li><a href="#">Global</a></li>
+          <li><a href="#">Find Hotel</a></li>
+          <li><a href="#">MemberShip</a></li>
+          <li><a href="#">Reservation</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Lang</a></li>
+          <li><a href="#">KRW</a></li>
+        </ul>
+        <div class="ham">
+          <span></span>
+        </div>
+      </div><!--header_top END-->
+      <div class="header_bottom">
+        <ul class="main_gnb">
+          <li class="showRsv">
+            <a href="">객실 예약</a>
+          </li>
+          <li>
+            <a href="../about/index.html">회사소개</a>
+          </li>
+          <li>
+            <a href="">여행지</a>
+          </li>
+          <li>
+            <a href="../room/index.html">객실</a>
+          </li>
+          <li>
+            <a href="sub3.html">제휴혜택</a>
+          </li>
+        </ul><!--main_gnb END-->
+        <ul class="gnb_dep2">
+          <li>
+            <span>여행지 추천</span>
+            <ul>
+              <li><a href="sub1.html">국내 여행지 추천</a></li>
+              <li><a href="sub2.html">해외 여행지 추천</a></li>
+              <li><a href="../travel/index.html">여행 소개</a></li>
+              <!-- <li><a href="#">menu4</a></li>
+              <li><a href="#">menu5</a></li>
+              <li><a href="#">menu6</a></li>
+              <li><a href="#">menu7</a></li> -->
+            </ul>
+          </li>
+        </ul>
+      </div><!--header_bottom END-->
+      <div class="checkin_out">
+        <div class="checkin_out_wrap">
+          <div class="locaiton">
+            <div class="kind">
+              <span>F.S.T</span>
+            </div>
+            <div class="kind_name">
+              <span>당신의 여행을 선택하세요</span>
+            </div>
+          </div><!--locaiton END-->
+          <div class="checkin_out_part">
+            <div class="check_text">
+              <span>체크인</span>
+            </div>
+            <div class="check_text">
+              <span>체크아웃</span>
+            </div>
+            <div class="check_active_box">
+            </div><!--check_active_box END-->
+          </div><!--checkin_out END-->
+          <div class="information">
+            <div class="info_text">객실</div>
+            <div class="info_text">성인</div>
+            <div class="info_text">어린이</div>
+            <div class="information_box"></div>
+          </div><!--information END-->
+          <div class="search">
+            <div class="promotion">무엇이든<br>검색하세요</div>
+            <button>검색</button>
+          </div><!--search END-->
+        </div><!--checkin_out_wrap END-->
+        <div class="hide"><a href="">숨기기</a></div>
+      </div><!--checkin_out END-->
+      <div class="open_content">
+        <div class="open_content_wrap">
+          <div class="open_content_left">
+            <div class="calendar_btn">
+              <span class="calendar_next"></span>
+              <span class="calendar_prev"></span>
+            </div>
+            <div class="calendar">
+              <div class="open_content_title">
+                <span class="current_date"></span>
+              </div>
+              <div class="calender_header">
+                <ul class="day_of_the_week">
+                  <li>일</li>
+                  <li>월</li>
+                  <li>화</li>
+                  <li>수</li>
+                  <li>목</li>
+                  <li>금</li>
+                  <li>토</li>
+                </ul>
+                <ul class="day_list">
+                </ul>
+              </div>
+            </div>
+            <div class="calendar">
+              <div class="open_content_title">
+                <span class="next_date"></span>
+              </div>
+              <div class="calender_header">
+                <ul class="day_of_the_week">
+                  <li>일</li>
+                  <li>월</li>
+                  <li>화</li>
+                  <li>수</li>
+                  <li>목</li>
+                  <li>금</li>
+                  <li>토</li>
+                </ul>
+                <ul class="nt_day">
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+          <div class="open_content_right">
+            <span class="notice">⚠️ 어린이는 만4세~12세</span>
+            <div class="open_content2_wrap">
+              <div class="choose active">
+                <div class="choose_name">객실1</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="choose">
+                <div class="choose_name">객실2</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="choose">
+                <div class="choose_name">객실3</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="add_choose">객실추가</div>
+              <div class="max_choose">객실은 최대 3개까지만 추가하실 수 있습니다.</div>
+              <div class="select">선택완료</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!--header_wrap END-->
+    <ul class="main_gnb_M">
+      <li class="showRsv_M">
+        <a>객실 예약</a>
+      </li>
+      <li>
+        <a href="../about/index.html">회사소개</a>
+      </li>
+      <li>
+        <a href="">여행지</a>
+        <ul class="acitve active">
+          <li><a href="sub1.html">국내 여행지</a></li>
+          <li><a href="sub2.html">해외 여행지</a></li>
+          <li><a href="../travel/index.html">여행지 소개</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">객실</a>
+      </li>
+      <li>
+        <a href="">제휴혜택</a>
+      </li>
+    </ul><!--main_gnb END-->
+  </header><!--header END-->
+  <main>
+    <div id="container">
+      <div class="title">
+        <h1>국내 여행지 추천</h1>
+      </div>
+      <div class="category_wrap">
+        <div class="categorys">
+          <h3>카테고리</h3>
+          <div class="mb_slide">
+            <!-- 모바일 환경에서만 사용하는 div -->
+            <ul>
+              <li>
+                <a href="#" data-value="sea"># 바다가 보이는</a>
+              </li>
+              <li>
+                <a href="#" data-value="mountain"># 산이 보이는</a>
+              </li>
+              <li>
+                <a href="#" data-value="nightView"># 야경이 예쁜</a>
+              </li>
+              <li>
+                <a href="#" data-value="sunrise"># 해돋이 명소</a>
+              </li>
+              <li>  
+                <a href="#" data-value="korea"># 한옥</a>
+              </li>
+              <li>
+                <a href="#" data-value="walking"># 산책하기 좋은</a>
+              </li>
+            </ul>            
+          </div>
+          <div class="slide_btn"></div>
+        </div>
+      </div>
+      <div class="sel_category_wrap">
+        <div class="sel_category">
+          <ul>
+          </ul>
+        </div>
+      </div>
+      <div class="sort_wrap">
+        <select class="sort_category">
+          <option value="default">추천순</option>
+          <option value="distance">가까운 거리부터</option>
+          <option value="country">가나다별로</option>
+        </select>        
+      </div>
+      <div class="contents_wrap">
+        <div class="contents">
+            <div class="swiper mySwiper" data-category="all sea nightView" data-country="부산" data-distance="396">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/busan-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/busan-2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/busan-3.avif" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/busan-4.webp" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">부산광역시 , 대한민국</p>
+                <p class="distance">396km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="sea"># 바다가 보이는</a>
+                  <a href="#" data-value="nightView"># 야경이 예쁜</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all island sea mountain" data-country="거제" data-distance="394">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/guje-1.PNG" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/guje-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/guje-3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/guje-4.jpg" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">거제도 , 경상남도</p>
+                <p class="distance">394km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="island"># 섬</a>
+                  <a href="#" data-value="mountain"># 산이 보이는</a>
+                  <a href="#" data-value="sea"># 바다가 보이는</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all walking korea" data-country="경주" data-distance="334">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/kyungju-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/kyungju-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/kyungju-3.jpg" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">경주 , 경상북도</p>
+                <p class="distance">334km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="walking"># 산책하기 좋은</a>
+                  <a href="#" data-value="korea"># 한옥</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all sea picture" data-country="군산" data-distance="207">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/gunsan-1.PNG" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/gunsan-2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/gunsan-3.PNG" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/gunsan-4.PNG" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">군산 , 전라북도</p>
+                <p class="distance">207km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="sea"># 바다가 보이는</a>
+                  <a href="#" data-value="picture"># 사진찍기 좋은</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all island walking" data-country="외도" data-distance="415">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/oedo-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/oedo-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/oedo-3.jpg" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">외도 보타니아 , 경상남도 거제시</p>
+                <p class="distance">415km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="walking"># 산책하기 좋은</a>
+                  <a href="#" data-value="island"># 섬</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all mountain picture nightView" data-country="삼척" data-distance="271">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/samchuck-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/samchuck-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/samchuck-3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/samchuck-4.jpg" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">삼척 , 강원도</p>
+                <p class="distance">271km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="mountain"># 산이 보이는</a>
+                  <a href="#" data-value="picture"># 사진찍기 좋은</a>
+                  <a href="#" data-value="nightView"># 야경이 예쁜</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all sea nightView walking" data-country="여수" data-distance="347">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/yeosu-1.PNG" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/yeosu-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/yeosu-3.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/yeosu-4.webp" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">여수 , 전라남도</p>
+                <p class="distance">347km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="sea"># 바다가 보이는</a>
+                  <a href="#" data-value="nightView"># 야경이 예쁜</a>
+                  <a href="#" data-value="walking"># 산책하기 좋은</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all mountain" data-country="춘천" data-distance="98">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/chuncheon.jpg" alt="chuncheon"></div>
+                <div class="swiper-slide"><img src="img/sub1/chuncheon.jpg" alt="chuncheon"></div>
+                <div class="swiper-slide"><img src="img/sub1/chuncheon.jpg" alt="chuncheon"></div>
+                <div class="swiper-slide"><img src="img/sub1/chuncheon.jpg" alt="chuncheon"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">춘천 , 강원도</p>
+                <p class="distance">98km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="mountain"># 산이 보이는</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all sunrise" data-country="포항" data-distance="331">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/pohang.png" alt="pohang"></div>
+                <div class="swiper-slide"><img src="img/sub1/pohang.png" alt="pohang"></div>
+                <div class="swiper-slide"><img src="img/sub1/pohang.png" alt="pohang"></div>
+                <div class="swiper-slide"><img src="img/sub1/pohang.png" alt="pohang"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">포항 , 경상북도</p>
+                <p class="distance">331km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="sunrise"># 해돚이 명소</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+            <div class="swiper mySwiper" data-category="all sea island mountain" data-country="제주" data-distance="450">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub1/jeju-1.PNG" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/jeju-2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/jeju-3.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub1/jeju-4.jpg" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="content_text">
+                <p class="country">제주 , 대한민국</p>
+                <p class="distance">450km 거리</p>
+                <div class="hash_tag">
+                  <a href="#" data-value="sea"># 바다가 보이는</a>
+                  <a href="#" data-value="mountain"># 산이 보이는</a>
+                  <a href="#" data-value="island"># 섬</a>
+                </div>
+                <a href="#" class="booking_btn">예약하러 가기 ></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer_wrap">
+      <div class="footer_top">
+        <div class="top_left">
+          <div class="footer_logo">
+            <h2><a href="#"></a></h2>
+          </div><!--footer_logo END-->
+          <div class="footer_info">
+            <span>Free Spirit Tour Company<br>14, Gangnam-daero 102-gil,<br>Gangnam-gu, Seoul, Republic of Korea</span>
+          </div><!--footer_info END-->
+        </div><!--top_left END-->
+        <div class="top_right">
+          <ul class="footer_gnb">
+            <li><a href="../about/index.html">회사 소개</a></li>
+            </ul>
+          <ul class="footer_gnb">
+            <li><a href="../product/sub1.html">국내 여행지</a></li>
+            <li><a href="../product/sub2.html">해외 여행지</a></li>
+            <li><a href="../travel/index.html">여행지 소개</a></li>
+          </ul>
+          <ul class="footer_gnb">
+            <li><a href="../room/index.html">객실</a></li>
+            <li><a href="../room/guide/index.html">객실 상세</a></li>
+            <li><a href="sub3.html">제휴 혜택</a></li>
+          </ul>
+          <ul class="footer_gnb footer_sns">
+            <li><a href="#"><img src="img/youtube.svg" alt="">유튜브</a></li>
+            <li><a href="#"><img src="img/insta.svg" alt="">인스타그램</a></li>
+            <li><a href="#"><img src="img/facebook.svg" alt="">페이스북  </a></li>
+            <li><a href="#"><img src="img/twitter.svg" alt="">트위터</a></li>
+          </ul>
+        </div><!--top_right END-->
+      </div>
+      <div class="footer_bottom">
+        <div class="bottom_left">
+            <ul>
+              <li><a href="#">장명래</a></li>
+              <li><a href="#">유상문</a></li>
+              <li><a href="#">정재훈</a></li>
+              <li><a href="#">이원미</a></li>
+            </ul>
+        </div><!--bottom_left END-->
+        <div class="bottom_right">
+          <div class="site_move">
+            <span>Family Site</span>
+            <span>+</span>
+            <div>
+              <span>move</span>
+            </div>
+          </div><!--site_move END-->
+        </div><!--bottom_right END-->
+      </div><!--footer_bottom END-->
+    </div><!--footer_wrap END-->
+  </footer><!--footer END-->
+</body>
+
+</html>

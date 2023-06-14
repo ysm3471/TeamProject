@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FST : Free Spirit Tour || About Company</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/reponsive.css">
+    <script src="js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/c9574cea71.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    <script defer src="js/main.js"></script>
+    <script defer src="js/basic.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header_wrap">
+      <div class="header_top">
+        <h1><a href="../index.html">LOGO</a></h1>
+        <ul>
+          <li><a href="#">Global</a></li>
+          <li><a href="#">Find Hotel</a></li>
+          <li><a href="#">MemberShip</a></li>
+          <li><a href="#">Reservation</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Lang</a></li>
+          <li><a href="#">KRW</a></li>
+        </ul>
+        <div class="ham">
+          <span></span>
+        </div>
+      </div><!--header_top END-->
+      <div class="header_bottom">
+        <ul class="main_gnb">
+          <li class="showRsv">
+            <a href="">객실 예약</a>
+          </li>
+          <li>
+            <a href="about/index.html">회사소개</a>
+          </li>
+          <li>
+            <a href="">여행지</a>
+          </li>
+          <li>
+            <a href="../room/index.html">객실</a>
+          </li>
+          <li>
+            <a href="../product/sub3.html">제휴혜택</a>
+          </li>
+        </ul><!--main_gnb END-->
+        <ul class="gnb_dep2">
+          <li>
+            <span>여행지 추천</span>
+            <ul>
+              <li><a href="../product/sub1.html">국내 여행지 추천</a></li>
+              <li><a href="../product/sub2.html">해외 여행지 추천</a></li>
+              <li><a href="../travel/index.html">여행 소개</a></li>
+              <!-- <li><a href="#">menu4</a></li>
+              <li><a href="#">menu5</a></li>
+              <li><a href="#">menu6</a></li>
+              <li><a href="#">menu7</a></li> -->
+            </ul>
+          </li>
+        </ul>
+      </div><!--header_bottom END-->
+      <div class="checkin_out">
+        <div class="checkin_out_wrap">
+          <div class="locaiton">
+            <div class="kind">
+              <span>F.S.T</span>
+            </div>
+            <div class="kind_name">
+              <span>당신의 여행을 선택하세요</span>
+            </div>
+          </div><!--locaiton END-->
+          <div class="checkin_out_part">
+            <div class="check_text">
+              <span>체크인</span>
+            </div>
+            <div class="check_text">
+              <span>체크아웃</span>
+            </div>
+            <div class="check_active_box">
+            </div><!--check_active_box END-->
+          </div><!--checkin_out END-->
+          <div class="information">
+            <div class="info_text">객실</div>
+            <div class="info_text">성인</div>
+            <div class="info_text">어린이</div>
+            <div class="information_box"></div>
+          </div><!--information END-->
+          <div class="search">
+            <div class="promotion">무엇이든<br>검색하세요</div>
+            <button>검색</button>
+          </div><!--search END-->
+        </div><!--checkin_out_wrap END-->
+        <div class="hide"><a href="">숨기기</a></div>
+      </div><!--checkin_out END-->
+      <div class="open_content">
+        <div class="open_content_wrap">
+          <div class="open_content_left">
+            <div class="calendar_btn">
+              <span class="calendar_next"></span>
+              <span class="calendar_prev"></span>
+            </div>
+            <div class="calendar">
+              <div class="open_content_title">
+                <span class="current_date"></span>
+              </div>
+              <div class="calender_header">
+                <ul class="day_of_the_week">
+                  <li>일</li>
+                  <li>월</li>
+                  <li>화</li>
+                  <li>수</li>
+                  <li>목</li>
+                  <li>금</li>
+                  <li>토</li>
+                </ul>
+                <ul class="day_list">
+                </ul>
+              </div>
+            </div>
+            <div class="calendar">
+              <div class="open_content_title">
+                <span class="next_date"></span>
+              </div>
+              <div class="calender_header">
+                <ul class="day_of_the_week">
+                  <li>일</li>
+                  <li>월</li>
+                  <li>화</li>
+                  <li>수</li>
+                  <li>목</li>
+                  <li>금</li>
+                  <li>토</li>
+                </ul>
+                <ul class="nt_day">
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+          <div class="open_content_right">
+            <span class="notice">⚠️ 어린이는 만4세~12세</span>
+            <div class="open_content2_wrap">
+              <div class="choose active">
+                <div class="choose_name">객실1</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="choose">
+                <div class="choose_name">객실2</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="choose">
+                <div class="choose_name">객실3</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="add_choose">객실추가</div>
+              <div class="max_choose">객실은 최대 3개까지만 추가하실 수 있습니다.</div>
+              <div class="select">선택완료</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!--header_wrap END-->
+    <ul class="main_gnb_M">
+      <li class="showRsv_M">
+        <a>객실 예약</a>
+      </li>
+      <li>
+        <a href="../about/index.html">회사소개</a>
+      </li>
+      <li>
+        <a href="">여행지</a>
+        <ul class="acitve active">
+          <li><a href="../product/sub1.html">국내 여행지</a></li>
+          <li><a href="../product/sub2.html">해외 여행지</a></li>
+          <li><a href="../travel/index.html">여행지 소개</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">객실</a>
+      </li>
+      <li>
+        <a href="../product/sub3.html">제휴혜택</a>
+      </li>
+    </ul><!--main_gnb END-->
+  </header><!--header END-->
+    <div class="visual">
+        <div class="visual_txt">
+            <h2>Our Journey  Towards a Sustainable Future</h2>            
+        </div>
+        <div class="visual_video">
+            <video muted loop autoplay>
+                <source src="img/Home.mp4" type="video/mp4">
+        </div>
+    </div>
+    <main>
+        <div class="big_bg_wrap">
+            <div class="bg_wrap"></div>
+        </div>
+            <section>
+                <div class="sec1">
+                    <div class="sec1_img ani_txt">
+                        <img src="img/img_text01.png" alt="pc" class="pc">
+                        <img src="img/img_text01 (1).png" alt="mobile" class="mobile" >
+                    </div>
+                    <div class="sec1_txt">                    
+                        <p class="sec1_p1 ani_txt">변화는 한 순간에 일어나지 않습니다.<br>
+                            매일의 작은 실천이 모여 <br>지속 가능한 삶을 이루는 것.
+                            이것이 우리가 꿈꾸는 <br>모두의 일상 속 Everyday Sustainability 입니다</p><br>
+                        <p class="sec1_p2 ani_txt"> 지속가능경영의 지향점 중 <br>하나는혁신성과 지속가능성을 동시에 갖춘 상품을 세상에 선보이고,<br>
+                            고객이 일상에서 더 나은 미래를 만들어 가는 <br>여정에 동참할 수 있도록 하는 것입니다.</p>
+                        <p class="sec1_p3 ani_txt">We enrich people’s lives
+                            by providing superior products and services<br>
+                            that our customers love and trust</p>
+                            
+                    </div>
+                    
+                </div>
+            </section>        
+            <section>
+                <div class="sec2">
+                    <div class="sec2_planet ani_txt">
+                        <h2 class="sec2_title">Planet</h2>
+                        <h5 class="sec2_h5">더 나은 세상,더 나은 지구를 꿈꿉니다</h5>
+                        <p class="sec2_p">
+                            Free Spirit Tour는 사람과 자연을 존중하며 
+                            인류의 삶과 지구환경 보전에 기여한다는 
+                            녹색경영 이념을 지키고 있습니다.
+                            <br><br>
+                            고객에게 친환경 가치를 제공하고 
+                            지속가능한 미래를 선도하기 위해 노력합니다.
+                            </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sec3">
+                    <div class="sec3_People ani_txt">
+                        <h2 class="sec3_title">People</h2>
+                        <h5 class="sec3_h5">사회적 책임을 다하며 
+                            미래로 함께 나아갑니다</h5>
+                        <p class="sec3_p">
+                            인류의 더 나은 삶을 위해 
+                            사회적 책임을 다하고자 합니다.
+                            <br><br>
+                            핵심가치인 '인재제일'과 '상생추구'를 위해 
+                            기술과 자원을 미래 세대 및 사회와 함께 나누며
+                            모두를 위한 디지털 라이프 스타일을 지향합니다.                            
+                            </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sec4">
+                    <div class="sec4_Principle ani_txt">
+                        <h2 class="sec4_title">Principle</h2>
+                        <h5 class="sec4_h5">지속가능한 미래를 위해 
+                            책임경영을 실천합니다
+                            </h5>
+                        <p class="sec4_p">
+                            합법적이고 윤리적인 방식으로 
+                            사업을 수행하며 공정하고 투명한 
+                            <br><br>
+                            경영문화 정착을 위해 노력하고 있습니다.                          
+                            </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sec5">
+                    <h2>Travel & Story</h2>
+                    <p>what our company provides</p>
+                </div>
+            </section>
+            <section>
+                <div class="sec6">       
+                    
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/travel1.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel10.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel4.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel5.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel7.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel8.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/travel9.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>                
+            </section>
+            <section>
+                <div class="sec7">
+                    <p>페이지 공유하기</p>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-link"></i>
+                </div>
+            </section>
+        </div>
+    </main>
+  <footer>
+    <div class="footer_wrap">
+      <div class="footer_top">
+        <div class="top_left">
+          <div class="footer_logo">
+            <h2><a href="#"></a></h2>
+          </div><!--footer_logo END-->
+          <div class="footer_info">
+            <span>Free Spirit Tour Company<br>14, Gangnam-daero 102-gil,<br>Gangnam-gu, Seoul, Republic of Korea</span>
+          </div><!--footer_info END-->
+        </div><!--top_left END-->
+        <div class="top_right">
+          <ul class="footer_gnb">
+            <li><a href="/about/index.html">회사 소개</a></li>
+            </ul>
+          <ul class="footer_gnb">
+            <li><a href="../product/sub1.html">국내 여행지</a></li>
+            <li><a href="../product/sub2.html">해외 여행지</a></li>
+            <li><a href="../travel/index.html">여행지 소개</a></li>
+          </ul>
+          <ul class="footer_gnb">
+            <li><a href="../room/index.html">객실</a></li>
+            <li><a href="../room/guide/index.html">객실 상세</a></li>
+            <li><a href="../product/sub3.html">제휴 혜택</a></li>
+          </ul>
+          <ul class="footer_gnb footer_sns">
+            <li><a href="#"><img src="img/youtube.svg" alt="">유튜브</a></li>
+            <li><a href="#"><img src="img/insta.svg" alt="">인스타그램</a></li>
+            <li><a href="#"><img src="img/facebook.svg" alt="">페이스북  </a></li>
+            <li><a href="#"><img src="img/twitter.svg" alt="">트위터</a></li>
+          </ul>
+        </div><!--top_right END-->
+      </div>
+      <div class="footer_bottom">
+        <div class="bottom_left">
+            <ul>
+              <li><a href="#">장명래</a></li>
+              <li><a href="#">유상문</a></li>
+              <li><a href="#">정재훈</a></li>
+              <li><a href="#">이원미</a></li>
+            </ul>
+        </div><!--bottom_left END-->
+        <div class="bottom_right">
+          <div class="site_move">
+            <span>Family Site</span>
+            <span>+</span>
+            <div>
+              <span>move</span>
+            </div>
+          </div><!--site_move END-->
+        </div><!--bottom_right END-->
+      </div><!--footer_bottom END-->
+    </div><!--footer_wrap END-->
+  </footer><!--footer END-->
+</body>
+</html>

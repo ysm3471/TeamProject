@@ -1,0 +1,2457 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="ko" class=" -webkit-"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeamProject 1</title>
+  <style media="" data-href="css/reset.css">/*# sourceURL=css/reset.css */
+/*@ sourceURL=css/reset.css */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: middle;
+  box-sizing: border-box;   /* 추가 */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+* {
+	box-sizing:border-box;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 추가 */
+a { 
+  text-decoration:none;
+  color:inherit;
+}</style>
+  <style media="" data-href="css/basic.css">/*# sourceURL=css/basic.css */
+/*@ sourceURL=css/basic.css */
+@charset "UTF-8"; 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body { 
+    font-family:GmarketSansMedium,Verdana, Geneva, Tahoma, sans-serif;
+    width:100%;
+    color:#333;
+}
+
+header {
+    position:relative;
+}
+
+    .header_wrap {
+        position:fixed;
+        top:0;
+        width:100%;
+        z-index:2;
+        transition:.5s;
+    }
+    .header_wrap.active {
+        top:-45px;
+    }
+        .header_top {
+            width:100%;
+            min-height:45px;
+            border-bottom:1px solid #eee;
+            font-size:12px;
+            font-weight:lighter;
+            background-color:rgba(255,255,255,0.6);
+            color:#333333a0;
+        }
+        .header_top h1 {
+            display:block;
+            width:200px;
+            height:45px;
+            float:left;
+        }
+        .header_top h1 a {
+            display:block;
+            width:100%;
+            height:100%;
+            background-image:url("http://127.0.0.1:5500/css/../img/main_logo_L.svg");
+            background-size:contain;
+            background-repeat:no-repeat;
+            text-indent:-9999px;
+        }
+        .header_top ul {
+            display:flex;
+            align-items:center;
+            min-height:45px;
+            float:right;
+        }
+        .header_top ul li {
+            position:relative;
+            margin:0 10px;
+            padding:auto;
+        }
+        .header_top ul li::after {
+            position:absolute;
+            top:3px;
+            right:-10px;
+            display:inline-block;
+            content:"";
+            width:1px;
+            height:15px;
+            background:#eee;
+        }
+        .header_top ul li a {}
+
+        .ham {
+            display:none;
+            position:absolute;
+            top:5px;
+            right:40px;
+            width:30px;
+            height:30px;
+        }
+        .ham span {
+            position:absolute;
+            top:15px;
+            left:0;
+            display:block;
+            content:"";
+            clear:both;
+            background:#333;
+            width:30px;
+            height:3px;
+            transition:.5s;
+        }
+        .ham span.on {
+            width:0;
+            transition:.5s;
+        }
+        .ham span::before, .ham span::after {
+            position:absolute;
+            display:block;
+            content:"";
+            width:30px;
+            height:3px;
+            background:#333;
+            transition:.5s;
+        }
+        .ham span::before {
+            top:+10px;
+        }
+        .ham span.on::before {
+            top:-0;
+            transform:rotate(45deg);
+        }
+        .ham span::after {
+            top:-10px;
+        }
+        .ham span.on::after {
+            top:0;
+            transform:rotate(-45deg);
+        }
+        
+        
+        /* header_top END */
+
+        .header_bottom {
+            position:sticky;
+            top:0;
+            width:100%;
+            min-height:85px;
+            border-bottom:1px solid #ccc;
+            background-color:rgba(255,255,255,0.9);
+        }
+        .header_bottom.active {
+            position:fixed;
+            top:0;
+            /* if scroll down change the posiiton, when out the header area(JS) */
+        }
+            .main_gnb {
+                display:flex;
+                min-height:85px;
+                justify-content:center;
+                align-items:center;
+                z-index:2;
+            }
+            .main_gnb > li {
+                position:relative;
+                margin:0 5%;
+            }
+            .main_gnb > li:hover {
+                border-bottom:1px solid rgb(56,56,56)
+            }
+            .main_gnb > li:nth-child(1):hover {
+                border:none;
+            }
+            .main_gnb > li a {
+                font-size:17px;
+            }
+            /* main_gnb END */
+            .gnb_dep2 {
+                width:100%;
+                height:auto;
+                text-align:center;
+                border-top:1px solid #ccc;
+                background:#fff;
+                border-radius:0 0 15px 15px;
+            }
+            .gnb_dep2 > li {
+                display:none; /* acitve => on/off */
+            }
+            .gnb_dep2 > li.active {
+                display:flex;
+            }
+            .gnb_dep2 > li span {
+                display:block;
+                width:30%;
+                text-align:left;
+                margin:28px 0 28px 20px;
+                border-right:1px solid #ccc;
+                transition:.3s;
+            }
+            .gnb_dep2 > li > ul {
+                display:flex;
+                flex-wrap:wrap;
+                width:70%;
+                padding:0 20px;
+            }
+            .gnb_dep2 > li > ul li {
+                width:100%;
+                margin:28px 20px;  
+            }
+            .gnb_dep2 > li > ul li a {
+                display:block;
+                text-align:left;
+            }
+            /* gnb_dep2 END */
+
+            .checkin_out {
+                display:block;
+                position:sticky;
+                top:0;
+                width:100%;
+                height:0;
+                background-color:rgba(140, 141, 140,0.8);
+                color:#fff;
+                opacity:0;
+                transition:.4s;
+                overflow:hidden;
+                z-index:-9999;
+                /* need to setting posiiton sticky and change fixed(JS) when happened scroll down event*/
+            }
+            .checkin_out.active {
+                opacity:1;
+                height:auto;
+                z-index:0;
+            }
+
+                .checkin_out_wrap {
+                    display:flex;
+                    width:80%;
+                    margin:0 auto;
+                    justify-content:space-between;
+                    text-align:center;  
+                    padding:20px 0;
+                }
+                .checkin_out_wrap > div {
+                    flex:1;
+                    border-right:1px solid #fff;
+                }
+                .checkin_out_wrap > div:last-child {
+                    border:none;
+                }
+                    .locaiton {
+                        text-align:left;    
+                    }
+                        .kind {
+                            display:block;
+                        }
+                        .kind span {
+                        }
+                        .kind_name {
+                            margin-top:20px;
+                        }
+                        .kind_name span {
+                            font-size:20px;
+                        }
+                    .checkin_out_part {
+                        display:flex;
+                        flex-wrap:wrap;
+                    }
+                        .check_text {
+                            flex:1;
+                            width:50%;
+                            font-size:14px;
+                        }
+                        .check_text span {}
+                        .check_active_box {
+                            display:block;
+                            content:"";
+                            width:100%;
+                            cursor:pointer;
+                            padding-top:20px;
+                        }
+                        .activeBoxAdd {
+                            margin:0 5%;
+                        }
+                            .in_day {}
+                            .total_day {}
+                            .out_day {}
+                        .information {
+                            display:flex;
+                            flex-wrap:wrap;
+                        }
+                            .info_text {
+                                flex:33.33%;
+                                font-size:14px;
+                            }
+                        .information_box {
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            cursor: pointer;
+                            padding-top: 20px;
+                        }
+                        .information_box > span:nth-child(2) {
+                            margin:30%;
+                        }
+                        .search {
+                            display:flex;
+                            align-items:center;
+                            text-align:left;
+                            padding-left:10px;   
+                        }
+                        .promotion {
+                            display:block;
+                            margin:0 30px 0 20px;
+                        }
+                        .search button {
+                            border:2px solid #fff;
+                            padding:5% 19%;
+                            background:transparent;
+                            color:#fff;    
+                            font-size:17px;
+                            cursor:pointer;
+                        }
+                        .search button:hover {
+                            background:#333;
+                             color:#ccc;
+                        }
+                /* checkin_out_wrap END */
+                .hide {
+                    position:absolute;
+                    top:20px;
+                    right:50px;
+                    display:block;
+                    font-size:13px;
+                    cursor:pointer;
+                }
+                .hide:hover {
+                    color:#333;
+                }
+            /* checkin_out END */
+        /* header_bottom END */
+        .open_content {
+            display:block;
+            position:absolute;
+            top:-200%;
+            left:20%;
+            width:1000px;
+            margin:auto;
+            padding:10px;
+            background:#fff;
+            border-radius:25px;
+            opacity:0;
+            transition:opacity .7s;
+        }
+        .open_content.active {
+            opacity:1;
+            top:100%;
+            z-index:3;
+        }
+        .open_content_wrap {
+            width:100%;
+            display:flex;
+        }
+        .open_content_left {
+            position:relative;
+            display:flex;
+            width:60%;
+        }
+        .open_content_left::after {
+            display:block;
+            content:"";
+            width:1px;
+            height:300px;
+            background:#ccc;
+        }
+        .calendar_btn {}
+        .calendar_next {
+            position:absolute;
+            top:20px;
+            right:40px;
+            display:block;
+            content:"";
+            width:20px;
+            height:20px;
+            border-top:1px solid #ccc;
+            border-right:1px solid #ccc;
+            transform:rotate(45deg);
+            z-index:1;
+        }
+        .calendar_next:hover {
+            cursor:pointer;
+        }
+        .calendar_prev {
+            position:absolute;
+            top:20px;
+            left:40px;
+            display:block;
+            content:"";
+            width:20px;
+            height:20px;
+            border-top:1px solid #ccc;
+            border-left:1px solid #ccc;
+            transform:rotate(-45deg);
+            z-index:1;
+        }
+        .calendar_prev:hover {
+            cursor:pointer;
+        }
+        .calendar {
+            position:relative;
+            width:50%;
+            margin:0 10px;
+        }
+        .calendar::after {
+            position:absolute;
+            top:60px ;
+            right:0;
+            display:block;
+            content:"";
+            width:1px;
+            height:200px;
+            background:#ccc;
+        }
+        .calendar:last-child::after {
+            display:none;
+        }
+        .calender_header {
+            position:relative;
+            width:100%;
+        }
+        .open_content_title {
+            text-align:center;
+            margin:20px auto;
+        }
+        .open_content_title > span {
+            position:relative;
+        }
+        .day_of_the_week {
+            display:flex; 
+            font-size:12px;
+        }
+        .day_of_the_week > li {
+            display:block;
+            width:calc(100% / 7);
+            padding:10px;   
+        }
+        .day_list, .nt_day{
+            display:flex;
+            flex-wrap:wrap;
+            font-size:12px;
+        }
+        .day_list > li > a:hover, .nt_day > li > a:hover {
+            cursor:pointer;
+        }
+        .day_number, .nt_dayList {
+            width:calc(100% / 7);
+            padding:10px;   
+        }
+        .calendar:nth-child(1) ul {
+            border-right:1px solid #ccc;
+        }
+        .prev_month {
+            color:#ccc;
+        }
+        .next_month {
+            color:#ccc;
+        }
+        .date.day_number.selected, .date.nt_dayList.selected {
+            background:#333;
+            color:#ccc;
+        }
+        .onF {
+            border-radius:15px 0 0 15px;
+            background:#333;
+            color:#ccc;
+        }
+        .onE {
+            border-radius:0 15px 15px 0;
+            background:#333;
+            color:#ccc;
+        }
+        .in_day, .out_day, .total_day {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .open_content_right {
+            width:40%;
+        }
+        .notice {
+            display:block;
+            text-align:right;
+            margin-right:3%;
+            margin-top:1%;
+            font-size:13px;
+            color:#ccc;
+        }
+        .open_content2_wrap {
+            width:100%;
+        }
+        .choose {
+            display:none;
+            margin:30px 0;
+            justify-content:space-around;
+            line-height:28px;
+        }
+        .choose.active {
+            display:flex;
+        }
+        .choose_name {
+            width:10%;
+            margin-left:20px;
+            font-size:15px;
+        }
+        .choose_box {
+            display:flex;
+            width:70%;
+        }
+        .choose_close {
+            display:inline-block;
+            width:20px;
+            height:20px;
+            margin:auto 0;
+            line-height:22px;
+            background:#333;
+            border-radius:50%;
+            color:#ccc;
+            font-size:16px;
+            transform:rotate(45deg);
+            text-align:center;
+            cursor:pointer
+        }
+        .choose:nth-child(1) .choose_close {
+            opacity:0;
+            z-index:-99999;
+        }
+        .choose_box > div:nth-child(1), .choose_box > div:nth-child(2) {
+            position:relative;
+            display:flex;
+            justify-content:space-around;
+            flex:1;
+            margin:0 10px;
+            font-size:14px;
+            text-align:center;
+            border:1px solid #ccc;
+            border-radius:10px;
+            background:#ccc;
+        }
+        .choose_box > div > span {
+            display:block;
+        }
+        .choose_adult {
+            position:relative;
+        }
+        .people {
+            width:60%;
+            font-size:15px;
+            border-right:1px solid #ccc;
+            border-left:1px solid #ccc;
+            background:#fff;
+        }
+        .add, .cadd {
+            font-size:25px;
+            cursor:pointer;
+            margin:auto 0;
+        }
+        .min, .cmin {
+            font-size:25px;
+            cursor:pointer;
+        }
+        .add_choose {
+            display:block;
+            width:100%;
+            line-height:20px;
+            margin:10px 0;
+            text-align:center;
+            cursor:pointer;
+        }
+        .add_choose.off {
+            display:none;
+        }
+        .add_choose::after {
+            display:inline-block;
+            content:"+";
+            width:20px;
+            height:20px;
+            margin-left:5px;
+            background:#333;
+            border-radius:50%;
+            color:#ccc;
+            font-size:16px;
+        }
+        .add_choose:hover::after {
+            background:#ccc;
+            color:#333;
+        }
+        .select {
+            width:40%;
+            margin:auto;
+            text-align:center;
+            padding:10px 20px;
+            border:1px solid #333;
+            background:#ccc;
+            color:#333;
+            cursor:pointer;
+            transition:.4s;
+        }
+        .select:hover {
+            border:1px solid #ccc;
+            background:#333;
+            color:#ccc;
+        }
+        .max_choose {
+            display:none;
+            text-align:center;
+            margin:2% 0;
+            font-size:13px;
+            color:#ccc;
+        }
+        .max_choose.on {
+            display:block;
+        }
+            .main_gnb_M {
+                display:block;
+                position:absolute;
+                top:45px;
+                left:-100%;
+                width:100%;
+                text-align:left;
+                background:#fff;
+                transition:.4s;
+                z-index:3;
+            }
+            .main_gnb_M.active {
+                left:0;
+            }
+            .main_gnb_M > li {
+                position:relative;
+                margin:40px 0 0 0;
+                line-height:40px;
+                border-bottom:1px solid #cccccc98;
+            }
+            .main_gnb_M > li:hover {
+                cursor:pointer;
+            }
+            .main_gnb_M > li:last-child {
+                border:none;
+            }
+            .main_gnb_M > li a {
+                display:inline-block;
+                width:100%;
+                height:100%;
+                font-size:14px;
+                padding:10px 30px;
+            }
+            .main_gnb_M > li:nth-child(3) a::after {
+                position:absolute;
+                bottom:15px;
+                right:15px;
+                content:"";
+                width:10px;
+                height:10px;
+                border-right:2px solid #333;
+                border-bottom:2px solid #333;
+                transform:rotate(45deg);
+            }
+            .main_gnb_M > li ul {
+                overflow:hidden;
+            }
+            .main_gnb_M > li:nth-child(1) a::after {
+                border:none;
+            }
+            .main_gnb_M > li:nth-child(2) a::after {
+                border:none;
+            }
+            /* main_gnb_M END */
+            .main_gnb_M > li:nth-child(3) > ul {
+                position:relative;
+                top:-1500%;
+                width:100%;
+                height:0;
+                opacity:0;
+                transition:height .5s,opacity 1s;
+            }
+            .main_gnb_M > li:nth-child(4) > ul {
+                position:relative;
+                top:-3000%;
+                width:100%;
+                height:0;
+                opacity:0;
+                transition:height .5s,opacity 1s;
+            }
+            .main_gnb_M > li:nth-child(5) > ul {
+                position:relative;
+                top:-4500%;
+                width:100%;
+                height:0;
+                opacity:0;
+                transition:height .5s,opacity 1s;
+            }
+            .main_gnb_M > li > ul.active {
+                top:0;
+                height:321px;
+                opacity:1;
+                z-index:1;
+            }
+
+/* header END */
+
+
+main {}
+main .content {
+    display:block;
+    content:"";
+    clear:both;
+    width:100%;
+    height:1000px;
+    background:salmon;
+    z-index:-1;
+}
+
+
+
+footer {
+    overflow:hidden;
+}
+.footer_wrap {
+    width:100%;
+    background:#333;
+    color:#ccc;
+}
+.footer_top {
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    margin:0 20px 20px 0;
+}
+.top_left {
+    width:30%;
+}
+.footer_logo {
+    padding:30px 0 20px 30px;
+}
+.footer_logo h2 {
+    display:block;
+    width:88px;
+    height:88px;
+}
+.footer_logo h2 a {
+    display:block;
+    width:100%;
+    height:100%;
+    background-image:url("http://127.0.0.1:5500/css/../img/main_logo_S.svg");
+}
+.footer_info {
+    margin-left:30px;
+    display:block;
+    width:200px;
+    font-size:12px;
+}
+.footer_info span {}
+.top_right {
+    display:flex;
+    padding:30px 30px 0 0
+}
+.footer_gnb {
+    border-right:1px solid #ccc;
+    font-size:13px;
+}
+.footer_gnb:last-child {
+    border:none;
+}
+.footer_gnb > li {
+    padding:10px 40px;
+}
+.footer_gnb li a {}
+.footer_bottom {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    height:90px;
+    border-top:1px solid #ccc;
+    font-size:12px;
+}
+.bottom_left {
+    width:33%
+}
+.bottom_left > ul {
+    display:flex;
+}
+.bottom_left > ul > li {
+    padding:10px 30px;
+}
+.bottom_left > ul > li:first-child {
+    padding-left:0;
+}
+.bottom_left > ul > li > a {}
+.bottom_right {}
+.site_move {
+    display:flex;
+    border:1px solid #ccc;
+}
+.site_move > span:nth-child(1) {
+    display:inline-block;
+    width:50%;
+    padding:10px 0;
+    line-height:30px;
+    padding-left:20px;
+    padding-right:40px;
+    white-space:nowrap;
+}
+.site_move > span:nth-child(2) {
+    display:inline-block;
+    width:20%;
+    padding:20px 10px 20px 30px;
+    border-right:1px solid #ccc;
+
+}
+.site_move > div {
+    text-align:center;
+    width:30%;
+    background:#ccc;
+}
+.site_move > div:hover {
+    cursor:pointer;
+}
+.site_move > div > span {
+    position:relative;
+    display:inline-block;
+    line-height:50px;
+    color:#333;
+}
+
+/* footer End*/
+
+
+/* -------------- media query -------------- */
+@media (max-width:1920px) {
+    .main_gnb_M {
+        display:none;
+    }
+}
+@media (max-width:900px) {
+    .header_top ul {
+        opacity:0;
+        display:none;
+    }
+    .main_gnb_M {
+        display:none;
+    }
+    .header_top {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        float:none;
+    }
+    .swiper-buttons {
+        display:none;
+    }
+    .slide_down_icon {
+        display:none;
+    }
+}
+@media (max-width:729px) {
+    .main_gnb > li > a {
+        font-size:14px;
+    }
+    .main_gnb_M {
+        display:none;
+    }
+    .site_move {
+        display:none;
+    }
+}
+@media (max-width:650px) {
+    .top_left {
+        display:flex;
+        width:100%;
+        justify-content:center;
+        align-items:center;
+    }
+    .top_right {
+        display:none;
+    }
+    .main_gnb_M {
+        display:block;
+    }
+    .ham {
+        display:block;
+    }
+    .header_bottom {
+        display:none;
+    }
+    .checkin_out {
+        display:none;
+    }
+    .bottom_left {
+        width:100%;
+    }
+    .bottom_left > ul {
+        justify-content:space-around;
+    }
+    .open_content {
+        display:none;
+    }
+    .footer_gnb {
+        display:none;
+    }
+    .footer_logo h2 {
+        width:60px;
+        height:60px;
+    }
+    .footer_info {
+        margin-top:20px;
+        width:300px;
+        line-height:20px;
+        font-size:10px;
+    }
+    .bottom_left > ul > li:first-child {
+        padding:10px 30px;
+    }
+}</style>
+  <style media="" data-href="css/main.css">/*# sourceURL=css/main.css */
+/*@ sourceURL=css/main.css */
+@charset "UTF-8"; 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main {}
+.content_wrap {}
+.content1_slider {
+    width:100%;
+    height:900px;
+}
+.content1_slider > .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.content1_slider > .swiper > .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content1_slider .swiper .swiper-slide img {
+    display: block;
+    object-fit: cover;
+    object-position:center;
+}
+.slide_main1 {
+    position:relative;
+    width:30%;
+}
+.slide_main1 > .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    position:absolute;
+    top:20% !important;
+    left:0% !important;
+    bottom:50% !important;
+}
+.slide_mian1 > .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width:4%;
+    height:4px;
+    background:white;
+    border-radius:0;
+    margin:0 !important;
+}
+.content1_slider .swiper-buttons {
+    position:relative;
+    bottom:10%;
+    width:100%;
+    height:30px;
+}
+/*-- pagination disgn --*/
+.content1_slider .swiper-button-next, .content1_slider .swiper-button-prev {
+    width:50px !important;
+    height:50px !important;
+    margin:0 50px;
+}
+.content1_slider .swiper-button-next:after, .content1_slider .swiper-button-prev:after {
+    display:block;
+    content:"";
+    width:50px;
+    height:50px;
+    font-size:0 !important;
+}
+.content1_slider .swiper-button-next::after {
+    border-right:2px solid #fff;
+    border-bottom:2px solid #fff;
+    transform:rotate(-45deg);
+}
+.content1_slider .swiper-button-prev::after {
+    border-left:2px solid #fff;
+    border-bottom:2px solid #fff;
+    transform:rotate(45deg);
+}
+/*-- next&prev button disgn --*/
+.content1_slider .swiper-button-playStop {
+    position:absolute;
+    bottom:7.5%;
+    right:42%;
+    width:2%;
+    height:30px;
+    z-index:10;
+}
+.content1_slider .swiper-button-playStop:hover {
+    cursor:pointer;
+}
+.content1_slider .swiper-button-playStop span {
+    display:block;
+    width:100%;
+    height:100%;
+    background:url("http://127.0.0.1:5500/css/../img/stop.svg") no-repeat center;
+    transition:0.3s;
+    z-index:10;
+}
+.content1_slider .swiper-button-playStop span.active {
+    background:url("http://127.0.0.1:5500/css/../img/play.svg") no-repeat;
+}
+.content1_slider .slide_down_icon {
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    width:200px;
+    height:auto;
+    transform:translate(-50%, -50%);
+    z-index:1;
+}
+.content1_slider .slide_down_icon img {
+    width:100%;
+    height:100%;
+}
+/*-- swiper END --*/
+
+.content2_promotion {
+    padding-top:80px;
+    width:70%;
+    margin:0 auto;
+}
+.content2_promotion .conetent2_main_title {
+    width:100%;
+    text-align:center;
+    margin:20px 0 40px 0;
+}
+.content2_promotion .conetent2_main_title p {
+    width:100%;
+    font-size:30px;
+}
+.main2_wrap {
+    justify-content:space-around;
+}
+.content2_promotion .swiper-slide {
+    width:30%;
+    margin:20px;
+}
+.content2_promotion .promotion2 {
+    width:100%;
+}
+.content2_promotion .promotion_wrap {
+    width:100%;
+}
+.content2_promotion .pro_img {
+    width:100%;
+    height:20%;
+    overflow:hidden;
+
+}
+.content2_promotion .pro_img img {
+    width:100%;
+    transition:.3s;
+}
+.content2_promotion .pro_img img:hover {
+    cursor:pointer;
+    object-fit:cover;
+    transform:scale(1.05);
+}
+.content2_promotion .pro_title {
+    display:block;
+    width:100%;
+    margin:20px 0;
+    padding-bottom:50px;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+}
+.content2_promotion .pro_title p {
+    font-size:23px;
+}
+.content2_promotion .pro_info {
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom:10px;
+}
+.content2_promotion .pro_info p {
+    font-size:16px;
+    line-height:20px;
+}
+.content2_promotion .pro_info p em {
+    color:#aaa;
+}
+.content2_promotion .pro_info p:nth-child(1) {
+    padding-bottom:30px;
+}
+.content2_promotion .pro_price {
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+    vertical-align:bottom;
+    line-height:20px;
+}
+.content2_promotion .pro_price span:nth-child(1) {
+    font-size:14px;
+}
+.content2_promotion .pro_price span:nth-child(2) {
+    display:inline-block;
+    font-size:14px;
+    margin-right:10px;
+}
+.content2_promotion .pro_price span:nth-child(2) strong {
+    font-size:20px;
+    font-weight:bold;
+}
+/*-- promotion END --*/
+
+
+.content3_about_map {
+    width:70%;
+    margin:100px auto 50px;
+}
+.about_map_wrap {
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+.about {
+    width:20%;
+    background:#333;
+    color:#ccc;
+}
+.about h2 {
+    line-height:50px;
+    padding:25px;
+}
+.about p {
+    padding:25px;
+}
+.map {
+    position:relative;
+    width:80%;
+}
+.map_link {
+    display:flex;
+    justify-content:space-between;
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:20%;
+    background:#ffffffcd;
+    z-index:10;
+}
+.map_link p {
+    display:inline-block;
+    line-height:80px;
+    margin-left:20px;
+}
+.map_btn {
+    display:block;
+    position:absolute;
+    top:25px;
+    right:10px;
+    content:"";
+    width: 100px;
+    height:30px;
+    text-align:center;
+    font-size:15px;
+    background:#333333cf;
+}
+.map_btn a {
+    line-height:30px;
+    color:#ccc;
+}
+/*-- map API END --*/
+
+.content4_info {
+    width:70%;
+    margin:20px auto;
+}
+.content4_info {}
+.about_info {
+    width:100%;
+    justify-content:space-between;
+}
+.about_info > ul {
+    display:flex;
+    justify-content:space-around;
+    text-align:left;
+}
+.about_info > ul > li {
+    width:25%;
+    padding:0 20px;
+    border-left:1px solid #3333339a;
+    color:#3333339a;
+    font-size:15px;
+}
+/*-- content4 END --*/
+.content5_sub_slider {
+    display: flex;
+    width:70%;
+    height:600px;
+    margin:100px auto;
+    overflow:hidden;
+}
+.content5_left {
+    position:relative;
+    width:70%;
+    margin-right:20px;
+}
+.content5_left .sub1_swiper {}
+.content5_left .wiper-wrapper {}
+.content5_left .swiper-slide {
+    height:600px
+}
+.content5_left .swiper-slide img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/*-- pagination disgn --*/
+.sub1_swiper .swiper-button-next, .sub1_swiper .swiper-button-prev {
+    width:50px !important;
+    height:50px !important;
+    margin:0 50px;
+}
+.sub1_swiper .swiper-button-next:after, .sub1_swiper .swiper-button-prev:after {
+    display:block;
+    content:"";
+    width:30px;
+    height:30px;
+    font-size:0 !important;
+}
+.sub1_swiper .swiper-button-next::after {
+    border-right:2px solid #fff;
+    border-bottom:2px solid #fff;
+    transform:rotate(-45deg);
+}
+.sub1_swiper .swiper-button-prev::after {
+    border-left:2px solid #fff;
+    border-bottom:2px solid #fff;
+    transform:rotate(45deg);
+}
+.content5_sub_slider > .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    position:absolute;
+    top:95% !important;
+    left:0% !important;
+    bottom:50% !important;
+}
+.content5_tag {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1;
+    background:rgba(255,255,255,.4);
+}
+.content5_tag span {
+    display:flex;
+    align-items:center;
+    padding-left:20px;
+    line-height:50px;
+    background-color: #333;
+    color: #fff;
+}
+.content5_mobile {
+    display:none;
+    position:absolute;
+    width:100px;
+    bottom:10%;
+    left:50%;
+    transform:translate(-50%,-10%);
+    z-index:1;
+}
+.content5_mobile img {
+    position:absolute;
+    top:0;
+    width:100%;
+}
+.content5_mobile img:nth-child(1) {
+    transform:rotate(-90deg);
+}
+.content5_mobile img:nth-child(2) {
+    transform:rotate(90deg);
+}
+
+.content5_right {
+    width:30%;
+}
+.sub_content {
+    position:relative;
+    text-align:center;
+    font-size:30px;
+    font-weight:lighter;
+    color:#ccc;
+    width: 100%;
+    height: 33.33%;
+    overflow:hidden;
+}
+.sub_content a {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+    color:#fff;
+    transition:.4s;
+    z-index:0;
+}
+.sub_content a::after {
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.3);
+    z-index:1;
+}
+.sub_content a:hover::after {
+    background:rgba(0,0,0,.7);
+}
+.sub_content a:hover {
+    transform:scale(1.1);
+}
+
+.sub_content:nth-child(1) a {
+    background-image:url("http://127.0.0.1:5500/css/../img/sub_content1.jpg");
+    background-size:cover;
+}
+.sub_content:nth-child(2) a {
+    background-image:url("http://127.0.0.1:5500/css/../img/sub_content2.jpg");
+    background-size:cover;
+}
+.sub_content:nth-child(3) a {
+    background-image:url("http://127.0.0.1:5500/css/../img/sub_content3.jpg");
+    background-size:cover;
+}
+.sub_content a span {
+    font-size:25px;
+    color:#fff;
+    z-index:2;
+}
+.sub_content a:hover span {
+    text-decoration:underline;
+}
+/*-- content5 END --*/
+
+.content6 {
+    position:relative;
+    width:100%;
+    padding:30px 0;
+    background:#ccc;
+}
+.content6_title {
+    display:block;
+    width:100%;
+    text-align:center;
+    font-size:20px;
+    line-height:60px;
+}
+.content6 > ul {
+    display:flex;
+    width:70%;
+    margin:auto;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+.content6 > ul > li {
+    width:16.66%;
+    margin-bottom:20px;
+}
+.content6_item {
+    width:100px;
+    margin:auto;
+}
+.content6_item a {
+    width:100%;
+}
+.content6_item a .icon {
+    margin-bottom:5px;
+}
+.content6_item a .icon img {
+    width:100%;
+}
+.content6_item a .text {
+    width:100%;
+}
+/*-- content6 END --*/
+
+.content7 {
+    margin:auto;
+}
+.content7_wrap {
+    width:80%;
+    margin:100px auto;
+}
+.video {
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+.video a {
+    position:relative;
+    display:block;
+    content:"";
+    width:100%;
+    height:100%;
+    
+}
+.video a::after {
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    content:"";
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.2);
+    background-image:url("http://127.0.0.1:5500/css/../img/video_play.svg");
+    background-repeat:no-repeat;
+    background-size:10%;
+    background-position:center;
+}
+.video a:hover::after {
+    background:rgba(0,0,0,.6);
+    background-image:url("http://127.0.0.1:5500/css/../img/video_play.svg");
+    background-repeat:no-repeat;
+    background-size:10%;
+    background-position:center;
+}
+.video a img {
+    width:100%;
+}
+a.open-modal-btn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    justify-content:center;
+    align-items:center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index:10; 
+  }
+  .close {
+    float:right;
+    font-size:50px;
+    font-weight:lighter;
+    font-family:'margun Godic';
+    color:#fff;
+    margin-bottom:10px;
+  }
+  .close:hover {
+    cursor:pointer;
+  }
+  .modal-content {
+    background-color:transparent;
+    margin: 15% auto;
+    width: 80%;
+    height:80%;
+  }  
+  .modal-hidden {
+    display: none;
+  }
+  
+  .modal-show {
+    display: flex;
+  }
+.video_slide {
+    width:60%;
+    margin:2% auto;
+    height:150px;
+    overflow:hidden;
+}
+.video_swiper {
+    width:100%;
+    height:100%;
+}
+.video_img img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+.video_slide .swiper-button-prev, .video_slide .swiper-rtl .swiper-button-next {
+    color:#fff !important;
+}
+.video_slide .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    color:#fff !important;
+}
+
+/*-- moblie --*/
+@media (max-width:1430px){
+    .content2_promotion .conetent2_main_title p {
+        font-size:22px;
+    }
+    .content2_promotion .pro_title p {
+        font-size:16px;
+    }
+    .content2_promotion .pro_info {
+        display:none;
+    }
+    .content2_promotion .pro_price span:nth-child(1) {
+        font-size:11px;
+    }
+    .content2_promotion .pro_price span:nth-child(2) {
+        display:inline-block;
+        font-size:11px;
+        margin-right:20px;
+    }
+    .content2_promotion .pro_price span:nth-child(2) strong {
+        font-size:14px;
+        font-weight:bold;
+    }
+    .about {
+        display:none;
+    }
+    .map {
+        width:100%;
+    }
+    .content4_info {
+        display:none;
+    }
+    .content6 > ul {
+        flex-wrap:wrap;
+    }
+}
+
+@media (max-width:1100px){
+    .content2_promotion .conetent2_main_title p {
+        font-size:20px;
+    }
+    .content2_promotion .pro_info p {
+        font-size:10px;
+        white-space:wrap;
+        line-height:20px;
+    }
+    .content2_promotion .pro_price span:nth-child(1) {
+        white-space:wrap;
+        font-size:10px;
+    }
+    .content2_promotion .pro_price span:nth-child(2) {
+        display:inline-block;
+        white-space:wrap;
+        font-size:9px;
+        margin-right:20px;
+    }
+    .content2_promotion .pro_price span:nth-child(2) strong {
+        white-space:wrap;
+        font-size:13px;
+        font-weight:bold;
+    }
+    .map_link {
+        height:15%;
+    }
+    .map_btn {
+        top:15px;
+    }
+    .map_link > p {
+        font-size:15px;
+        line-height:60px;
+    }
+    .content6 > ul > li {
+        width:33.33%
+    }
+    .video_slide {
+        height:100px;
+    }
+    .video_img img {
+        height:100px;
+    }
+}
+@media (max-width:800px){
+    .main2_wrap {
+        justify-content:unset;
+    }
+    .content2_promotion {
+        padding-top:80px;
+        width:80%;
+    }
+    .content2_promotion .conetent2_main_title {
+        width:100%;
+        text-align:center;
+    }
+    .content2_promotion .pro_info {
+        display:block;
+    }
+    .content2_promotion .conetent2_main_title p {
+        width:100%;
+        font-size:18px;
+    }
+    .content2_promotion .swiper-slide {
+        width:100% !important;
+        margin:0;
+    }
+    .content2_promotion .pro_title {
+        display:block;
+        width:100%;
+        margin:20px 0;
+        padding-bottom:50px;
+        text-align:left;
+        border-bottom:1px solid #ccc;
+    }
+    .content2_promotion .pro_title p {
+        font-size:17px;
+    }
+    .content2_promotion .pro_info p {
+        font-size:13px;
+        line-height:20px;
+    }
+    .content2_promotion .pro_price span:nth-child(1) {
+        font-size:11px;
+    }
+    .content2_promotion .pro_price span:nth-child(2) {
+        display:inline-block;
+        font-size:12px;
+        margin-right:20px;
+    }
+    .content2_promotion .pro_price span:nth-child(2) strong {
+        font-size:16px;
+        font-weight:bold;
+    }
+    .map_link {
+        height:15%;
+    }
+    .map_btn {
+        top:15px;
+    }
+    .map_link > p {
+        font-size:14px;
+    }
+    .content5_sub_slider {
+        flex-direction:column;
+    }
+    .content5_left {
+        width:100%;
+    }
+    .content5_right {
+        display:none;
+    }
+    .content6_title {
+        font-size:16px;    
+    }
+    .content6_item {
+        width:80px;
+    }
+    .content6_item a .text {
+        font-size:14px;
+    }
+    .sub1_swiper .swiper-button-next, .sub1_swiper .swiper-button-prev {
+        display:none;
+    }
+    .slide_mian1 > .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        display:none;
+    }
+    .content5_mobile {
+        display:block;
+    }
+    .modal-content {
+        height:400px;
+    }
+    .video_slide {
+        height:80px;
+    }
+    .video_img img {
+        height:80px;
+    }
+    .video_slide .swiper-button-next {
+        display:none;
+    }
+    .video_slide .swiper-button-prev {
+        display:none;
+    }
+
+}
+@media (max-width:700px){
+    .map_link {
+        height:10%;
+    }
+    .map_btn {
+        display:none;
+    }
+    .map_link > p {
+        font-size:12px;
+        line-height:40px;
+    }
+    .modal-content {
+        height:300px;
+    }
+    .video_slide {
+        height:50px;
+    }
+    .video_img img {
+        height:50px;
+    }
+}
+@media (max-width:699px){
+    .video_slide {
+        display:none;
+    }
+    .modal-content {
+        height:300px;
+    }
+}
+@media (max-width:430px){
+    .content6_title {
+        font-size:14px;    
+    }
+    .content6_item {
+        width:50px;
+    }
+    .content6_item a .text {
+        font-size:7px;
+    }
+}
+@media (max-width:390px){
+    .video {
+        display:none;
+    }
+    .content6_item a .text {
+        display:none;
+    }
+}</style>
+  <style media="" data-href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">/*# sourceURL=https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css */
+/*@ sourceURL=https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css */
+/**
+ * Swiper 9.2.4
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2023 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: April 21, 2023
+ */
+
+@font-face{font-family:swiper-icons;src:url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}.swiper,swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);box-sizing:content-box}.swiper-android .swiper-slide,.swiper-wrapper{transform:translate3d(0px,0,0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}.swiper-slide,swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{transform-style:preserve-3d}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-horizontal.swiper-css-mode>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-vertical.swiper-css-mode>.swiper-wrapper{scroll-snap-type:y mandatory}.swiper-centered>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.swiper-centered>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-horizontal>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-vertical>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;box-sizing:border-box;border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top-color:transparent}.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader{animation:swiper-preloader-spin 1s infinite linear}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.swiper-virtual .swiper-slide{-webkit-backface-visibility:hidden;transform:translateZ(0)}.swiper-virtual.swiper-css-mode .swiper-wrapper::after{content:'';position:absolute;left:0;top:0;pointer-events:none}.swiper-virtual.swiper-css-mode.swiper-horizontal .swiper-wrapper::after{height:1px;width:var(--swiper-virtual-size)}.swiper-virtual.swiper-css-mode.swiper-vertical .swiper-wrapper::after{width:1px;height:var(--swiper-virtual-size)}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{position:absolute;top:var(--swiper-navigation-top-offset,50%);width:calc(var(--swiper-navigation-size)/ 44 * 27);height:var(--swiper-navigation-size);margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));z-index:10;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--swiper-navigation-color,var(--swiper-theme-color))}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-next.swiper-button-hidden,.swiper-button-prev.swiper-button-hidden{opacity:0;cursor:auto;pointer-events:none}.swiper-navigation-disabled .swiper-button-next,.swiper-navigation-disabled .swiper-button-prev{display:none!important}.swiper-button-next:after,.swiper-button-prev:after{font-family:swiper-icons;font-size:var(--swiper-navigation-size);text-transform:none!important;letter-spacing:0;font-variant:initial;line-height:1}.swiper-button-prev,.swiper-rtl .swiper-button-next{left:var(--swiper-navigation-sides-offset,10px);right:auto}.swiper-button-prev:after,.swiper-rtl .swiper-button-next:after{content:'prev'}.swiper-button-next,.swiper-rtl .swiper-button-prev{right:var(--swiper-navigation-sides-offset,10px);left:auto}.swiper-button-next:after,.swiper-rtl .swiper-button-prev:after{content:'next'}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;transition:.3s opacity;transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-disabled>.swiper-pagination,.swiper-pagination.swiper-pagination-disabled{display:none!important}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:var(--swiper-pagination-bottom,8px);top:var(--swiper-pagination-top,auto);left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.swiper-pagination-bullet{width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));display:inline-block;border-radius:var(--swiper-pagination-bullet-border-radius,50%);background:var(--swiper-pagination-bullet-inactive-color,#000);opacity:var(--swiper-pagination-bullet-inactive-opacity, .2)}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet:only-child{display:none!important}.swiper-pagination-bullet-active{opacity:var(--swiper-pagination-bullet-opacity, 1);background:var(--swiper-pagination-color,var(--swiper-theme-color))}.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets{right:var(--swiper-pagination-right,8px);left:var(--swiper-pagination-left,auto);top:50%;transform:translate3d(0px,-50%,0)}.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0;display:block}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:.2s transform,.2s top}.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s left}.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,:host(.swiper-horizontal.swiper-rtl) .swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s right}.swiper-pagination-fraction{color:var(--swiper-pagination-fraction-color,inherit)}.swiper-pagination-progressbar{background:var(--swiper-pagination-progressbar-bg-color,rgba(0,0,0,.25));position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:var(--swiper-pagination-color,var(--swiper-theme-color));position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}.swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.swiper-horizontal>.swiper-pagination-progressbar,.swiper-pagination-progressbar.swiper-pagination-horizontal,.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:var(--swiper-pagination-progressbar-size,4px);left:0;top:0}.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-vertical,.swiper-vertical>.swiper-pagination-progressbar{width:var(--swiper-pagination-progressbar-size,4px);height:100%;left:0;top:0}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:var(--swiper-scrollbar-border-radius,10px);position:relative;-ms-touch-action:none;background:var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))}.swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled{display:none!important}.swiper-horizontal>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-horizontal{position:absolute;left:var(--swiper-scrollbar-sides-offset,1%);bottom:var(--swiper-scrollbar-bottom,4px);top:var(--swiper-scrollbar-top,auto);z-index:50;height:var(--swiper-scrollbar-size,4px);width:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar.swiper-scrollbar-vertical,.swiper-vertical>.swiper-scrollbar{position:absolute;left:var(--swiper-scrollbar-left,auto);right:var(--swiper-scrollbar-right,4px);top:var(--swiper-scrollbar-sides-offset,1%);z-index:50;width:var(--swiper-scrollbar-size,4px);height:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));border-radius:var(--swiper-scrollbar-border-radius,10px);left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;object-fit:contain}.swiper-slide-zoomed{cursor:move;touch-action:none}.swiper .swiper-notification,swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-free-mode>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}.swiper-grid>.swiper-wrapper{flex-wrap:wrap}.swiper-grid-column>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}.swiper-fade.swiper-free-mode .swiper-slide{transition-timing-function:ease-out}.swiper-fade .swiper-slide{pointer-events:none;transition-property:opacity}.swiper-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-fade .swiper-slide-active,.swiper-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube{overflow:visible}.swiper-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.swiper-cube .swiper-slide .swiper-slide{pointer-events:none}.swiper-cube.swiper-rtl .swiper-slide{transform-origin:100% 0}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-next,.swiper-cube .swiper-slide-next+.swiper-slide,.swiper-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-cube .swiper-slide-shadow-bottom,.swiper-cube .swiper-slide-shadow-left,.swiper-cube .swiper-slide-shadow-right,.swiper-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0px;width:100%;height:100%;opacity:.6;z-index:0}.swiper-cube .swiper-cube-shadow:before{content:'';background:#000;position:absolute;left:0;top:0;bottom:0;right:0;filter:blur(50px)}.swiper-flip{overflow:visible}.swiper-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-flip .swiper-slide-active,.swiper-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-flip .swiper-slide-shadow-bottom,.swiper-flip .swiper-slide-shadow-left,.swiper-flip .swiper-slide-shadow-right,.swiper-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-creative .swiper-slide{-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;transition-property:transform,opacity,height}.swiper-cards{overflow:visible}.swiper-cards .swiper-slide{transform-origin:center bottom;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden}</style>
+
+  <script src="./TeamProject 1_files/prefixfree.min.js"></script>
+  <script defer="" src="./TeamProject 1_files/basic.js"></script>
+  <script defer="" src="./TeamProject 1_files/main.js"></script>
+  <script src="./TeamProject 1_files/swiper-bundle.min.js"></script>
+
+
+</head>
+<body cz-shortcut-listen="true">
+  <header>
+    <div class="header_wrap">
+      <div class="header_top">
+        <h1><a href="http://127.0.0.1:5500/index.html">LOGO</a></h1>
+        <ul>
+          <li><a href="http://127.0.0.1:5500/index.html#">Global</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Find Hotel</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">MemberShip</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Reservation</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Log In</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Sign In</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Lang</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">KRW</a></li>
+        </ul>
+        <div class="ham">
+          <span class="on"></span>
+        </div>
+      </div><!--header_top END-->
+      <div class="header_bottom">
+        <ul class="main_gnb">
+          <li class="showRsv">
+            <a href="http://127.0.0.1:5500/index.html">객실 예약</a>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5500/about/index.html">회사소개</a>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5500/index.html">여행지</a>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5500/room/index.html">객실</a>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5500/product/sub3.html">제휴혜택</a>
+          </li>
+        </ul><!--main_gnb END-->
+        <ul class="gnb_dep2">
+          <li>
+            <span>여행지 추천</span>
+            <ul>
+              <li><a href="http://127.0.0.1:5500/product/sub1.html">국내 여행지 추천</a></li>
+              <li><a href="http://127.0.0.1:5500/product/sub2.html">해외 여행지 추천</a></li>
+              <li><a href="http://127.0.0.1:5500/travel/index.html">여행 소개</a></li>
+              <!-- <li><a href="#">menu4</a></li>
+              <li><a href="#">menu5</a></li>
+              <li><a href="#">menu6</a></li>
+              <li><a href="#">menu7</a></li> -->
+            </ul>
+          </li>
+        </ul>
+      </div><!--header_bottom END-->
+      <div class="checkin_out">
+        <div class="checkin_out_wrap">
+          <div class="locaiton">
+            <div class="kind">
+              <span>F.S.T</span>
+            </div>
+            <div class="kind_name">
+              <span>당신의 여행을 선택하세요</span>
+            </div>
+          </div><!--locaiton END-->
+          <div class="checkin_out_part">
+            <div class="check_text">
+              <span>체크인</span>
+            </div>
+            <div class="check_text">
+              <span>체크아웃</span>
+            </div>
+            <div class="check_active_box"><span class="activeBoxAdd">5월2일</span>/<span class="activeBoxAdd">1박</span>/<span class="activeBoxAdd">5월3일</span></div><!--check_active_box END-->
+          </div><!--checkin_out END-->
+          <div class="information">
+            <div class="info_text">객실</div>
+            <div class="info_text">성인</div>
+            <div class="info_text">어린이</div>
+            <div class="information_box"><span class="roomCount">1</span><span class="aCount">1</span><span class="pCount">0</span></div>
+          </div><!--information END-->
+          <div class="search">
+            <div class="promotion">무엇이든<br>검색하세요</div>
+            <button>검색</button>
+          </div><!--search END-->
+        </div><!--checkin_out_wrap END-->
+        <div class="hide"><a href="http://127.0.0.1:5500/index.html">숨기기</a></div>
+      </div><!--checkin_out END-->
+      <div class="open_content">
+        <div class="open_content_wrap">
+          <div class="open_content_left">
+            <div class="calendar_btn">
+              <span class="calendar_next"></span>
+              <span class="calendar_prev"></span>
+            </div>
+            <div class="calendar">
+              <div class="open_content_title">
+                <span class="current_date">2023년 5월 </span>
+              </div>
+              <div class="calender_header">
+                <ul class="day_of_the_week">
+                  <li>일</li>
+                  <li>월</li>
+                  <li>화</li>
+                  <li>수</li>
+                  <li>목</li>
+                  <li>금</li>
+                  <li>토</li>
+                </ul>
+                <ul class="day_list"><li class="day_number"><a></a></li><li class="date day_number"><a>1</a></li><li class="date day_number"><a>2</a></li><li class="date day_number"><a>3</a></li><li class="date day_number"><a>4</a></li><li class="date day_number"><a>5</a></li><li class="date day_number sunday"><a>6</a></li><li class="date day_number monday"><a>7</a></li><li class="date day_number"><a>8</a></li><li class="date day_number"><a>9</a></li><li class="date day_number"><a>10</a></li><li class="date day_number"><a>11</a></li><li class="date day_number"><a>12</a></li><li class="date day_number sunday"><a>13</a></li><li class="date day_number monday"><a>14</a></li><li class="date day_number"><a>15</a></li><li class="date day_number"><a>16</a></li><li class="date day_number"><a>17</a></li><li class="date day_number"><a>18</a></li><li class="date day_number"><a>19</a></li><li class="date day_number sunday"><a>20</a></li><li class="date day_number monday"><a>21</a></li><li class="date day_number"><a>22</a></li><li class="date day_number"><a>23</a></li><li class="date day_number"><a>24</a></li><li class="date day_number"><a>25</a></li><li class="date day_number"><a>26</a></li><li class="date day_number sunday"><a>27</a></li><li class="date day_number monday"><a>28</a></li><li class="date day_number"><a>29</a></li><li class="date day_number"><a>30</a></li><li class="date day_number"><a>31</a></li></ul>
+              </div>
+            </div>
+            <div class="calendar">
+              <div class="open_content_title">
+                <span class="next_date">2023년 6월 </span>
+              </div>
+              <div class="calender_header">
+                <ul class="day_of_the_week">
+                  <li>일</li>
+                  <li>월</li>
+                  <li>화</li>
+                  <li>수</li>
+                  <li>목</li>
+                  <li>금</li>
+                  <li>토</li>
+                </ul>
+                <ul class="nt_day"><li class="day_number"><a></a></li><li class="day_number"><a></a></li><li class="day_number"><a></a></li><li class="day_number"><a></a></li><li class="date day_number monday"><a>1</a></li><li class="date day_number"><a>2</a></li><li class="date day_number"><a>3</a></li><li class="date day_number"><a>4</a></li><li class="date day_number"><a>5</a></li><li class="date day_number"><a>6</a></li><li class="date day_number sunday"><a>7</a></li><li class="date day_number monday"><a>8</a></li><li class="date day_number"><a>9</a></li><li class="date day_number"><a>10</a></li><li class="date day_number"><a>11</a></li><li class="date day_number"><a>12</a></li><li class="date day_number"><a>13</a></li><li class="date day_number sunday"><a>14</a></li><li class="date day_number monday"><a>15</a></li><li class="date day_number"><a>16</a></li><li class="date day_number"><a>17</a></li><li class="date day_number"><a>18</a></li><li class="date day_number"><a>19</a></li><li class="date day_number"><a>20</a></li><li class="date day_number sunday"><a>21</a></li><li class="date day_number monday"><a>22</a></li><li class="date day_number"><a>23</a></li><li class="date day_number"><a>24</a></li><li class="date day_number"><a>25</a></li><li class="date day_number"><a>26</a></li><li class="date day_number"><a>27</a></li><li class="date day_number sunday"><a>28</a></li><li class="date day_number monday"><a>29</a></li><li class="date day_number"><a>30</a></li></ul>
+              </div>
+            </div>
+  
+          </div>
+          <div class="open_content_right">
+            <span class="notice">⚠️ 어린이는 만4세~12세</span>
+            <div class="open_content2_wrap">
+              <div class="choose active">
+                <div class="choose_name">객실1</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="choose">
+                <div class="choose_name">객실2</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="choose">
+                <div class="choose_name">객실3</div>
+                <div class="choose_box">
+                  <div class="choose_adult">
+                    <span class="min">-</span>
+                    <span class="people">성인<span class="a_count">1</span></span>
+                    <span class="add">+</span>
+                  </div>
+                  <div class="choose_child">
+                    <span class="cmin">-</span>
+                    <span class="people">어린이<span class="p_count">0</span></span>
+                    <span class="cadd">+</span>
+                  </div>
+                  <div class="choose_close">+</div>
+                </div>
+              </div>
+              <div class="add_choose">객실추가</div>
+              <div class="max_choose">객실은 최대 3개까지만 추가하실 수 있습니다.</div>
+              <div class="select">선택완료</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!--header_wrap END-->
+    <ul class="main_gnb_M active">
+      <li class="showRsv_M">
+        <a href="http://127.0.0.1:5500/index.html">객실 예약</a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:5500/index.html">회사소개</a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:5500/index.html">여행지</a>
+        <ul class="active">
+          <li><a href="http://127.0.0.1:5500/product/sub1.html">국내 여행지</a></li>
+          <li><a href="http://127.0.0.1:5500/product/sub2.html">해외 여행지</a></li>
+          <li><a href="http://127.0.0.1:5500/travel/index.html">여행지 소개</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:5500/index.html">객실</a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:5500/index.html">제휴혜택</a>
+      </li>
+    </ul><!--main_gnb END-->
+  </header><!--header END-->
+  <main>
+    <div class="content_wrap">
+      <div class="content1_slider">
+        <div class="swiper main1_swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <div class="swiper-wrapper" id="swiper-wrapper-192f3487d26d394d" aria-live="off" style="transition-duration: 1500ms; transform: translate3d(-1029px, 0px, 0px);">
+              
+              
+              
+              
+          <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 4" data-swiper-slide-index="1" style="width: 343px;">
+                <img src="./TeamProject 1_files/slider2.jpg" alt="">
+              </div><div class="swiper-slide" role="group" aria-label="3 / 4" data-swiper-slide-index="2" style="width: 343px;">
+                <img src="./TeamProject 1_files/slider3.jpg" alt="">
+              </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="4 / 4" data-swiper-slide-index="3" style="width: 343px;">
+                <img src="./TeamProject 1_files/slider4.jpg" alt="">
+              </div><div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4" data-swiper-slide-index="0" style="width: 343px;">
+                <img src="./TeamProject 1_files/slider1.jpg" alt="">
+              </div></div>
+          <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-192f3487d26d394d"></div>
+          <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-192f3487d26d394d"></div>
+          <div class="swiper-buttons">
+            <div class="swiper-pagination slide_main1 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+            <div class="swiper-button-playStop">
+              <span></span>
+            </div>
+          </div>
+          <div class="slide_down_icon"><img src="./TeamProject 1_files/icon-pagedown.gif" alt=""></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      </div>
+      <div class="content2_promotion">
+        <div class="conetent2_main_title">
+          <p>F.S.T 추천 프로모션</p>
+        </div>
+        <div class="swiper main2_swiper on swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <div class="swiper-wrapper main2_wrap" id="swiper-wrapper-3c6bb9fd47705475" aria-live="off" style="transition-duration: 1500ms; transform: translate3d(-304px, 0px, 0px);">
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 3" style="width: 274px; margin-right: 30px;">
+              <div class="promotion2">
+                <div class="promotion_wrap">
+                  <div class="pro_img">
+                    <img src="./TeamProject 1_files/pro1.jpg" alt="">
+                  </div>
+                  <div class="pro_title">
+                    <p>
+                      Healing Aroma
+                    </p>
+                  </div>
+                  <div class="pro_info">
+                    <p>
+                      객실+아로마 마사지 2인+입욕제+스페셜 드링크
+                    </p>
+                    <p>
+                      투숙 : <em>2023년 5월 1일 ~ 2023년 12월 22일</em>
+                    </p>
+                    <p>
+                      예약 : <em>2023년 5월 1일 ~ 2023년 12월 21일</em>
+                    </p>
+                  </div>
+                  <div class="pro_price">
+                    <span>PACKAGE</span>
+                    <span>최저 <strong>900,000</strong> KRW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 3" style="width: 274px; margin-right: 30px;">
+              <div class="promotion2">
+                <div class="promotion_wrap">
+                  <div class="pro_img">
+                    <img src="./TeamProject 1_files/pro2.jpg" alt="">
+                  </div>
+                  <div class="pro_title">
+                    <p>
+                      Business Room
+                    </p>
+                  </div>
+                  <div class="pro_info">
+                    <p>
+                      객실+PC+프로젝터 1대+커피 &amp; 브래드 세트
+                    </p>
+                    <p>
+                      투숙 : <em>2023년 5월 1일 ~ 2023년 12월 22일</em>
+                    </p>
+                    <p>
+                      예약 : <em>2023년 5월 1일 ~ 2023년 12월 21일</em>
+                    </p>
+                  </div>
+                  <div class="pro_price">
+                    <span>PACKAGE</span>
+                    <span>최저 <strong>700,000</strong> KRW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="3 / 3" style="width: 274px; margin-right: 30px;">
+              <div class="promotion2">
+                <div class="promotion_wrap">
+                  <div class="pro_img">
+                    <img src="./TeamProject 1_files/pro3.jpg" alt="">
+                  </div>
+                  <div class="pro_title">
+                    <p>
+                      Special Dinner
+                    </p>
+                  </div>
+                  <div class="pro_info">
+                    <p>
+                      객실+2인 식사 세트+샴페인 1병+스페셜 기프트
+                    </p>
+                    <p>
+                      투숙 : <em>2023년 5월 1일 ~ 2023년 12월 22일</em>
+                    </p>
+                    <p>
+                      예약 : <em>2023년 5월 1일 ~ 2023년 12월 21일</em>
+                    </p>
+                  </div>
+                  <div class="pro_price">
+                    <span>PACKAGE</span>
+                    <span>최저 <strong>1,200,000</strong> KRW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      </div>
+      <div class="content3_about_map">
+        <div class="about_map_wrap">
+          <div class="about">
+            <h2>시그니엘 서울 소개</h2>
+            <p>국내 최고층 건물인 롯데월드타워 76층~101층에 위치한 시그니엘 서울은 한국의 아름다움을 현대적인 감각으로 풀어낸</p>
+          </div>
+          <div class="map">
+            <div id="map" style="width: 100%; height: 380px; position: relative; overflow: hidden; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/bg_tile.png&quot;);"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;http://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;http://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;"><div style="position: absolute;"><div style="position: absolute; z-index: 0;"></div><div style="position: absolute; z-index: 1; left: 0px; top: 0px;"><img src="./TeamProject 1_files/908.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 0px; top: 132px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./TeamProject 1_files/909.png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 256px; top: 132px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./TeamProject 1_files/908(1).png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 0px; top: -124px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./TeamProject 1_files/909(1).png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 256px; top: -124px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./TeamProject 1_files/908(2).png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 0px; top: -380px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./TeamProject 1_files/909(2).png" alt="" role="presentation" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 256px; top: -380px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"></div><div style="position: absolute; z-index: 1;"></div><div style="width: 240px; height: 380px; position: absolute; z-index: 1;"></div><div style="position: absolute; z-index: 1;"><svg version="1.1" style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; width: 1200px; height: 1900px; left: -480px; top: -760px;" viewBox="0 0 1200 1900"><defs></defs></svg></div><div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);"></div></div></div><div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);"><div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left; display: none;"><div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;"></div><div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">50m</div></div><div style="margin: 0px 4px; float: left;"><a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;"><img src="./TeamProject 1_files/m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;"></a><div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div></div></div><div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;"></div></div>
+            <script type="text/javascript" src="./TeamProject 1_files/sdk.js"></script><script charset="UTF-8" src="./TeamProject 1_files/kakao.js"></script>
+            <script>
+              let container = document.getElementById('map');
+              let options = {
+                center: new kakao.maps.LatLng(37.500130, 127.029046),
+                level: 3
+              };
+              let map = new kakao.maps.Map(container, options);
+            </script>
+            <!-- map API (Daum) END -->
+            <div class="map_link">
+              <p>위치 : 서울특별시 강남구 테헤란로5길 24 3층</p>
+              <div class="map_btn"><a href="http://127.0.0.1:5500/index.html#">오시는길</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content4_info">
+        <div class="about_info">
+          <ul>
+            <li>
+              <p>체크인 15:00</p>
+              <p>체크아웃 11:00</p>
+            </li>
+            <li>
+              <p>객실 : 235</p>
+              <p>다이닝 : 6</p>
+              <p>컨벤션 : 5</p>
+            </li>
+            <li>
+              <p>대표번호 : +82-2-3213-1000</p>
+              <p>객실 예약 : +82-2-3213-1111</p>
+            </li>
+            <li>
+              <p>대표 부대시설 : 레스토랑,  바 &amp; 라운지,  스파, 사우나,  수영장,  피트니스센터,  살롱 드 시그니엘</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content5_sub_slider">
+        <div class="content5_left">
+          <div class="swiper sub1_swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+            <div class="swiper-wrapper" id="swiper-wrapper-5b6d5da8918a3cbe" aria-live="off" style="transition-duration: 1500ms; transform: translate3d(-1680px, 0px, 0px);">
+                
+                <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 8" data-swiper-slide-index="1" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider2.jpg" alt="">
+                </div>
+                <div class="swiper-slide" role="group" aria-label="3 / 8" data-swiper-slide-index="2" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider3.jpg" alt="">
+                </div>
+                <div class="swiper-slide" role="group" aria-label="4 / 8" data-swiper-slide-index="3" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider4.jpg" alt="">
+                </div>
+                <div class="swiper-slide" role="group" aria-label="5 / 8" data-swiper-slide-index="4" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider5.jpg" alt="">
+                </div>
+                <div class="swiper-slide" role="group" aria-label="6 / 8" data-swiper-slide-index="5" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider6.jpg" alt="">
+                </div>
+                <div class="swiper-slide" role="group" aria-label="7 / 8" data-swiper-slide-index="6" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider7.jpg" alt="">
+                </div>
+                <div class="swiper-slide swiper-slide-prev" role="group" aria-label="8 / 8" data-swiper-slide-index="7" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider8.jpg" alt="">
+                </div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 8" data-swiper-slide-index="0" style="width: 240px;">
+                  <img src="./TeamProject 1_files/sub_slider1.jpg" alt="">
+                </div></div>
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-5b6d5da8918a3cbe"></div>
+            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-5b6d5da8918a3cbe"></div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+          <div class="content5_tag">
+            <span>F.S.T에서 제공하는 각국의 숙소</span>
+          </div>
+          <div class="content5_mobile">
+            <img src="./TeamProject 1_files/icon_right_left.gif" alt="" loop="">
+            <img src="./TeamProject 1_files/icon_right_left.gif" alt="" loop="">
+          </div>
+        </div>
+        <div class="content5_right">
+          <div class="sub_content">
+            <a href="http://127.0.0.1:5500/index.html#">
+              <span>다이닝</span>
+            </a>
+          </div>
+          <div class="sub_content">
+            <a href="http://127.0.0.1:5500/index.html#">
+              <span>파티</span>
+            </a>
+          </div>
+          <div class="sub_content">
+            <a href="http://127.0.0.1:5500/index.html#">
+              <span>관광명소</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="content6">
+        <div class="content6_title">
+          <span>F.S.T 테스트 타이틀입니다. 좋은 타이틀을 생각해보세요</span>
+        </div>
+        <ul>
+          <li>
+            <div class="content6_item">
+              <a href="http://127.0.0.1:5500/index.html#">
+                <div class="icon">
+                  <img src="./TeamProject 1_files/warning.svg" alt="">
+                </div>
+                <div class="text">sub_menu1</div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="content6_item">
+              <a href="http://127.0.0.1:5500/index.html#">
+                <div class="icon">
+                  <img src="./TeamProject 1_files/warning.svg" alt="">
+                </div>
+                <div class="text">sub_menu1</div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="content6_item">
+              <a href="http://127.0.0.1:5500/index.html#">
+                <div class="icon">
+                  <img src="./TeamProject 1_files/warning.svg" alt="">
+                </div>
+                <div class="text">sub_menu1</div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="content6_item">
+              <a href="http://127.0.0.1:5500/index.html#">
+                <div class="icon">
+                  <img src="./TeamProject 1_files/warning.svg" alt="">
+                </div>
+                <div class="text">sub_menu1</div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="content6_item">
+              <a href="http://127.0.0.1:5500/index.html#">
+                <div class="icon">
+                  <img src="./TeamProject 1_files/warning.svg" alt="">
+                </div>
+                <div class="text">sub_menu1</div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="content6_item">
+              <a href="http://127.0.0.1:5500/index.html#">
+                <div class="icon">
+                  <img src="./TeamProject 1_files/warning.svg" alt="">
+                </div>
+                <div class="text">sub_menu1</div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content7">
+        <div class="content7_wrap">
+          <div class="video">
+            <a href="https://youtu.be/PMBa2F44jxU?list=TLPQMjUwNDIwMjO34Ih_gexmrA" class="open-modal-btn">
+              <img src="./TeamProject 1_files/videoThum.jpg" alt="">
+            </a>
+            <div class="modal modal-hidden">
+              <div class="modal-content">
+                <span class="close">X</span>
+                <iframe width="100%" height="100%" src="./TeamProject 1_files/OQxeT-ySlnc.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="video_slide">
+            <div class="swiper video_swiper swiper-initialized swiper-horizontal">
+              <div class="swiper-wrapper" id="swiper-wrapper-cf4ee9a6e2883014" aria-live="off" style="transition-duration: 1500ms;">
+                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" role="group" aria-label="1 / 3">
+                  <div class="video_img">
+                    <img src="./TeamProject 1_files/video_train.svg" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" role="group" aria-label="2 / 3">
+                  <div class="video_img">
+                    <img src="./TeamProject 1_files/video_ship.svg" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" role="group" aria-label="3 / 3">
+                  <div class="video_img">
+                    <img src="./TeamProject 1_files/video_airplane.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-cf4ee9a6e2883014"></div>
+              <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-cf4ee9a6e2883014"></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer_wrap">
+      <div class="footer_top">
+        <div class="top_left">
+          <div class="footer_logo">
+            <h2><a href="http://127.0.0.1:5500/index.html#"></a></h2>
+          </div><!--footer_logo END-->
+          <div class="footer_info">
+            <span>Free Spirit Tour Company<br>14, Gangnam-daero 102-gil,<br>Gangnam-gu, Seoul, Republic of Korea</span>
+          </div><!--footer_info END-->
+        </div><!--top_left END-->
+        <div class="top_right">
+          <ul class="footer_gnb">
+            <li><a href="http://127.0.0.1:5500/about/index.html">회사 소개</a></li>
+            </ul>
+          <ul class="footer_gnb">
+            <li><a href="http://127.0.0.1:5500/product/sub1.html">국내 여행지</a></li>
+            <li><a href="http://127.0.0.1:5500/product/sub2.html">해외 여행지</a></li>
+            <li><a href="http://127.0.0.1:5500/travel/index.html">여행지 소개</a></li>
+          </ul>
+          <ul class="footer_gnb">
+            <li><a href="http://127.0.0.1:5500/room/index.html">객실</a></li>
+            <li><a href="http://127.0.0.1:5500/room/guide/index.html">객실 상세</a></li>
+          </ul>
+        </div><!--top_right END-->
+      </div>
+      <div class="footer_bottom">
+        <div class="bottom_left">
+            <ul>
+              <li><a href="http://127.0.0.1:5500/index.html#">장명래</a></li>
+              <li><a href="http://127.0.0.1:5500/index.html#">유상문</a></li>
+              <li><a href="http://127.0.0.1:5500/index.html#">정재훈</a></li>
+              <li><a href="http://127.0.0.1:5500/index.html#">이원미</a></li>
+            </ul>
+        </div><!--bottom_left END-->
+        <div class="bottom_right">
+          <div class="site_move">
+            <span>Family Site</span>
+            <span>+</span>
+            <div>
+              <span>move</span>
+            </div>
+          </div><!--site_move END-->
+        </div><!--bottom_right END-->
+      </div><!--footer_bottom END-->
+    </div><!--footer_wrap END-->
+  </footer><!--footer END-->
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

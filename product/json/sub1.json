@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "country":"부산",
+      "distance":396
+    },
+    {
+      "country":"거제",
+      "distance":394
+    },
+    {
+      "country":"경주",
+      "distance":334
+    },
+    {
+      "country":"군산",
+      "distance":207
+    },
+    {
+      "country":"외도",
+      "distance":415
+    },
+    {
+      "country":"삼척",
+      "distance":271
+    },
+    {
+      "country":"여수",
+      "distance":347
+    },
+    {
+      "country":"춘천",
+      "distance":98
+    },
+    {
+      "country":"포항",
+      "distance":331
+    },
+    {
+      "country":"제주",
+      "distance":450
+    }
+  ]
+}

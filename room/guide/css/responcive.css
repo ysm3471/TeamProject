@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@media (max-width:1920px) {
+  .main_gnb_M {
+      display:none;
+  }
+}
+@media (max-width:1400px) {
+    .hotel {
+        margin:40px 36px;
+    }
+  }
+
+@media (max-width:1390px) {
+    .hotel {
+        margin:40px 10px;
+    }
+    .hotel_img {
+        width:400px;
+    }
+  }
+
+@media (max-width:900px) {
+  .header_top ul {
+      opacity:0;
+      display:none;
+  }
+  .main_gnb_M {
+      display:none;
+  }
+  .header_top {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      float:none;
+  }
+  .swiper-buttons {
+      display:none;
+  }
+  .slide_down_icon {
+      display:none;
+  }
+
+  .hotel {
+    margin:30px 25px;
+  }
+
+  .rooms_guide {
+    display:block;
+    line-height:1.5;
+}
+}
+
+@media (max-width:729px) {
+  .main_gnb > li > a {
+      font-size:14px;
+  }
+  .main_gnb_M {
+      display:none;
+  }
+  .site_move {
+      display:none;
+  }
+  .hotel {
+    margin:30px 10px;
+  }
+  .hotel_img img {
+    width:709px;
+  }
+}
+
+@media (max-width:650px) {
+  .top_left {
+      display:flex;
+      width:100%;
+      justify-content:center;
+      align-items:center;
+  }
+  .top_right {
+      display:none;
+  }
+  .main_gnb_M {
+      display:block;
+  }
+  .ham {
+      display:block;
+  }
+  .header_bottom {
+      display:none;
+  }
+  .checkin_out {
+      display:none;
+  }
+  .bottom_left {
+      width:100%;
+  }
+  .bottom_left > ul {
+      justify-content:space-around;
+  }
+  .open_content {
+      display:none;
+  }
+  .footer_gnb {
+      display:none;
+  }
+  .footer_logo h2 {
+      width:60px;
+      height:60px;
+  }
+  .footer_info {
+      margin-top:20px;
+      width:300px;
+      line-height:20px;
+      font-size:10px;
+  }
+  .bottom_left > ul > li:first-child {
+      padding:10px 30px;
+  }
+
+  .inner {max-width:650px;}
+}
